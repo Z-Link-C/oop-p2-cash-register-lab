@@ -18,6 +18,7 @@ class CashRegister:
       raise ValueError("Not valid discount")
     
   def add_item(self, item,price,quantity=1):
+     #adds items if quantity isnt equal or less than 0
      if quantity <= 0: 
       raise ValueError("Quantity must be greater than or equal to 0.")
      self.total+=price*quantity
